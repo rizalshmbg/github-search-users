@@ -1,16 +1,23 @@
+import { Auth0Provider } from '@auth0/auth0-react'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
-import * as serviceWorker from './serviceWorker'
 import { GithubProvider } from './context/context'
-import { Auth0Provider } from '@auth0/auth0-react'
+import './index.css'
+import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<GithubProvider>
-			<App />
-		</GithubProvider>
+		<Auth0Provider
+			domain='rizalshmbg.us.auth0.com'
+			clientId='V50glkUBGF4HaegLFtZGdCmcbIKM2eK4'
+			redirectUri={window.location.origin}
+			cacheLocation='localstorage'
+		>
+			<GithubProvider>
+				<App />
+			</GithubProvider>
+		</Auth0Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 )

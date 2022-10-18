@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import loginImg from '../images/login-img.svg'
 import styled from 'styled-components'
+import loginImg from '../images/login-img.svg'
 
 const Error = () => {
 	return (

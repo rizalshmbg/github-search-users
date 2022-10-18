@@ -1,6 +1,6 @@
-# React Project : Github Search User
+# React Project : Github Search Users
 
-## [Link](https://react-project-github-search-user.netlify.app)
+## [Link](https://react-project-github-search-users.netlify.app)
 
 ## Create using
 

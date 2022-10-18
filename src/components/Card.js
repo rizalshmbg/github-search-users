@@ -1,8 +1,7 @@
-import React from 'react'
-import { GithubContext } from '../context/context'
+import React, { useContext } from 'react'
+import { MdBusiness, MdLink, MdLocationOn } from 'react-icons/md'
 import styled from 'styled-components'
-import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md'
-import { useContext } from 'react'
+import { GithubContext } from '../context/context'
 
 const Card = () => {
 	const { githubUser } = useContext(GithubContext)

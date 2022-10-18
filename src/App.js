@@ -1,22 +1,25 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Dashboard, Error, Login } from './pages'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { AuthWrapper, Dashboard, Error, Login, PrivateRoute } from './pages'
 
 function App() {
 	return (
-		<Router>
-			<Switch>
-				<Route path='/' exact={true}>
-					<Dashboard></Dashboard>
-				</Route>
-				<Route path='/login'>
-					<Login />
-				</Route>
-				<Route path='*'>
-					<Error />
-				</Route>
-			</Switch>
-		</Router>
+		<AuthWrapper>
+			<Router>
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<PrivateRoute>
+								<Dashboard />
+							</PrivateRoute>
+						}
+					/>
+					<Route path='login' element={<Login />} />
+					<Route path='*' element={<Error />} />
+				</Routes>
+			</Router>
+		</AuthWrapper>
 	)
 }
 

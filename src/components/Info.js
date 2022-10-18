@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { GithubContext } from '../context/context'
+import { FiUserPlus, FiUsers } from 'react-icons/fi'
+import { GoGist, GoRepo } from 'react-icons/go'
 import styled from 'styled-components'
-import { GoRepo, GoGist } from 'react-icons/go'
-import { FiUsers, FiUserPlus } from 'react-icons/fi'
+import { GithubContext } from '../context/context'
 
 const UserInfo = () => {
 	const { githubUser } = useContext(GithubContext)

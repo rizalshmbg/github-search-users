@@ -1,7 +1,7 @@
-import Info from "./Info";
-import Repos from "./Repos";
-import User from "./User";
-import Search from "./Search";
-import Navbar from "./Navbar";
+import Info from './Info'
+import Navbar from './Navbar'
+import Repos from './Repos'
+import Search from './Search'
+import User from './User'
 
-export { Info, Repos, User, Search, Navbar };
+export { Info, Repos, User, Search, Navbar }
